@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% set titulo = "Cadastro de Produto" %}
+{% block conteudo %}
+
+<h1>{{ titulo }}</h1>
+
+<form action="/post_contato" method="post">
+    <!-- Nome -->
+    <div class="mb-3 form-floating ">
+        <input 
+            class="form-control shadow shadow-lg"
+            type="text"
+            name="nome"
+            id="nome"
+            placeholder=" "
+        >
+        <label class="form-label" for="nome">Nome Completo</label>
+    </div>
+
+    <!-- Descrição -->
+    <div class="mb-3 form-floating">
+        <input
+            class="form-control shadow shadow-lg"
+            type="text"
+            name="descricao"
+            id="descricao"
+            placeholder=" "
+        >
+        <label class="form-label" for="descricao">Descrição</label>
+    </div>
+
+    <!-- Estoque -->
+    <div class="mb-3 form-floating">
+        <input
+            class="form-control shadow shadow-lg"
+            type="text"
+            name="estoque"
+            id="estoque"
+            placeholder=" "
+        >
+        <label class="form-label" for="estoque">Estoque</label>
+    </div>
+
+    <!-- Preço -->
+    <div class="mb-3 form-floating">
+        <input
+            class="form-control shadow shadow-lg"
+            type="preco"
+            name="preco"
+            id="preco"
+            placeholder=" "
+        >
+        <label class="form-label" for="preco">Preço</label>
+    </div>
+
+    <!-- Seleção de categoria -->
+    <div class="mb-3 form-floating">
+        <select
+            class="form-control shadow shadow-lg"
+            name="categoria"
+            id="categoria"
+            placeholder=" "
+        >
+            <option value="1">Alimentos</option>
+            <option value="2">Limpeza</option>
+            <option value="3">Eletrônicos</option>
+            <option value="4">Brinquedos</option>
+            <option value="5">Vestuário</option>
+            <option value="6">Automotivo</option>
+            <option value="7">Esporte&Lazer</option>
+            <option value="8"></option>
+        </select>
+        <label class="form-label" for="categoria">Categoria</label>
+    </div>
+
+    <div class="mb-3">
+        <button class="btn btn-lg btn-primary border rounded-2 shadow-lg" type="submit">Enviar</button>
+    </div>
+
+</form>
+{% endblock %}
