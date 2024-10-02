@@ -4,7 +4,7 @@ SQL_CRIAR_TABELA = """
     nome TEXT NOT NULL,
     descricao TEXT NOT NULL,
     estoque INTEGER NOT NULL,
-    preco REAL NOT NULL,
+    preco FLOAT NOT NULL,
     categoria TEXT NOT NULL
 )"""
 

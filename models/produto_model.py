@@ -8,7 +8,7 @@ class Produto:
     nome: Optional[str] = None
     descricao: Optional[str] = None
     estoque: Optional[str] = None
-    preco: Optional[int] = None
+    preco: Optional[float] = None
     categoria: Optional[int] = None
     
 
