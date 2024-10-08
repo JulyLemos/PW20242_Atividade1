@@ -10,6 +10,12 @@
         <main class="container">
             <h1 class="display-6">{{ titulo }}</h1>
             <hr>
+            <div style="text-align: center;"></div>
+                <a class="btn btn-outline-success btn-sm {{  css_principal }}" href="/"><b>Principal</b></a>
+                <a class="btn btn-outline-success btn-sm {{ css_sobre }}" href="/cadastro">Cadastro</a>
+                
+            </div>
+            <hr>
             {% block conteudo %}
             {% endblock %}
         </main>
