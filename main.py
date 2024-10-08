@@ -4,6 +4,7 @@ from fastapi.templating import Jinja2Templates
 import uvicorn
 
 from models.produto_model import Produto
+from repositories import produto_repo
 
 
 app = FastAPI() #objeto fastapi
@@ -25,9 +26,10 @@ def post_cadastro(request: Request,
                  nome:str = Form(...),
                  descricao:str = Form(...),
                  estoque:str = Form(...),
-                 preco:str = Form(...)):
-   produto = Produto(None, nome, descricao, estoque, preco)
-   produto = produto_repo.inserir(produto)  #ainda não tem a conexão
+                 preco:str = Form(...),
+                 categoria:str = Form(...)):
+   produto = Produto(None, nome, descricao, estoque, preco,categoria)
+   produto = produto_repo.inserir(produto)  #tem conexao com o produto_repo em repositories
    return RedirectResponse("/", 303)
 
 if __name__ == "__main__":

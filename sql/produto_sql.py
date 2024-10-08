@@ -18,3 +18,9 @@ SQL_EXCLUIR = """
     DELETE FROM produto
     WHERE id=?
 """
+
+SQL_OBTER_TODOS = """
+    SELCT id, nome, descricao, estoque, preco, categoria
+    FROM produto
+    ORDER BY nome
+"""
